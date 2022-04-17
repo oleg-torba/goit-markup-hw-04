@@ -151,7 +151,7 @@ body {
     line-height: 1.14;
     list-style-type: none;
     letter-spacing: 0.02em;
-    text-align: center;
+    justify-content: center;
 }
 
 .contact-item {
@@ -183,7 +183,13 @@ body {
 /* HERO */
 
 .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/overlay.jpg), url(../images/Img-overlay.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: var(--hero-bgc);
+    max-width: 1600px;
+    min-height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -525,4 +531,50 @@ body {
     white-space: nowrap;
     clip-path: inset(100%);
     overflow: hidden;
+}
+
+/* Стилі іконок */
+.clients {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    /* box-sizing: border-box; */
+    border-radius: 4px;
+
+    
+}
+
+.clients-icon {
+    
+    display: block;
+    outline: 1px solid red;
+    /* background-size: contain; */
+
+    
+}
+
+.smartphone-icon, .email-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.smartphone-icon:hover {
+    fill: var(--hover-color);
+}
+
+/* .benefits-icon {
+    background-color: var(--section-command-bgc);
+
+} */
+
+.benefits-icons {
+    background-color: var(--section-command-bgc);
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    width: 270;
+    height: 120;
+    border-radius: 4px;
 }
