@@ -156,6 +156,7 @@ body {
 }
 
 .contact-item {
+    fill: var(--secondary-color);
     margin-right: 50px;}
 
 
@@ -182,11 +183,12 @@ body {
 /* HERO */
 
 .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/overlay.jpg), url(../images/Img-overlay.jpg);
+    background: url(../images/overlay.jpg);
+    background-color: rgba(47, 48, 58, 0.4);
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: var(--hero-bgc);
     max-width: 1600px;
     min-height: 600px;
     padding-top: 200px;
@@ -301,6 +303,7 @@ body {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
+
 }
 
 .image-list:nth-child(3n) {
@@ -311,6 +314,10 @@ body {
     margin-bottom: 0px;
 }
 
+.image-list:hover,
+.image-list:focus {
+    border: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .photo {
     display: block;
     max-width: 100%;
@@ -331,9 +338,11 @@ body {
 
 .command-list {
     background-color: var(--adress-hero-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     width: 270px;
     margin-right: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
 }
 
 .command-list:last-child {
@@ -369,9 +378,12 @@ body {
 
 /* footer */
 .footer {
+    
     padding: 60px 0;
     background-color: var(--footer-bgc);
 }
+
+
 
 /* Навігація футера */
 .adress {
@@ -433,10 +445,6 @@ body {
     text-decoration: none;
 }
 
-
-
-
-
 /* Portfolio */
 
 
@@ -461,6 +469,10 @@ body {
     border: 1px solid var(--image-border-color);
     border-top: 0;
 }
+.image-list:hover,
+.image-list:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 /* Кнопки портфоліо */
 
@@ -476,6 +488,8 @@ body {
     margin-right: 8px;
     list-style-type: none;
 }
+
+
 
 .but .buttons-list:last-child {
     margin-right: 0;
@@ -499,7 +513,8 @@ body {
 .buttons:focus {
     background-color: var(--hover-color);
     color: var(--adress-hero-color);
-}
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} 
 /* списки картинок */
 .images-list {
     width: 370px;
@@ -521,7 +536,6 @@ body {
     height: auto;
 }
 
-
 /* Приховування заголовку */
 .visually-hiden {
     position: absolute;
@@ -537,15 +551,12 @@ body {
 
 /* Стилі іконок */
 .smartphone-icon, .email-icon {
-    
-    fill: var(--secondary-color);
     margin-right: 10px;
     vertical-align: middle;
 }
 
 /* Іконки соцмереж команди */
 .social-link-team {
-    fill: var(--clients-icon-color);
     display: flex;
     width: 206px;
     height: 44px;
@@ -555,28 +566,40 @@ body {
 }
 
 .social-link-list {
+    fill: var(--clients-icon-color);
     background-color: var(--adress-hero-color);
+    width: 44px;
+    height: 44px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 12px;
 }
+
+
 
 .team-icon {
-    padding-right: 10px;
+    object-position: center;
+    display: inline-block;
 }
 
-.team-icon:hover {
+.social-link-list:hover,
+.social-link-list:focus {
     fill: var(--adress-hero-color);
-    color: #2196F3;
+    border: color var(--hover-color);
+    background-color: var(--hover-color);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .client-item {
+    fill: var(--clients-icon-color);
     object-position: center;
-    display: inline-block;
+    display: block;
     margin-right: 30px;
-    /* margin-right: 30px;
     width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
-    border-radius: 4px; */
+    border-radius: 4px;
 }
 
 .client-item:last-child {
@@ -592,59 +615,72 @@ body {
 
 
 .client {
+    
     display: block;
     padding: 16px 32px;
-    width: 170px;
-    height: 92px;
-    border: 1px solid #AFB1B8;
-    box-sizing: border-box;
-    border-radius: 4px;
 }
 
 
 .clients-icon {
     
     display: block;
-    fill: var(--clients-icon-color);
+    /*  */
     /* outline: 1px solid red; */
 }
 
-.client:hover {
+.client-item:hover {
     fill: var(--hover-color);
     border-color: var(--hover-color);
 }
 
-/* .email-icon:hover {
-    fill: var(--hover-color);
-} */
+.benefits {
+    display: flex;
+}
 
-.benefits-icons {
-    background-color: var(--section-command-bgc);
-    padding: 25px 100px;
-    margin-bottom: 30px;
+
+.benefits-list {
     width: 270;
-    height: 120;
+    height: 251;
     border-radius: 4px;
 }
 
+.benefits-icons {
+    width: 270;
+    height: 120;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+}
+
+/* СТилі футера */
+.footer-adress {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 231;
+    height: 81;
+}
+
+/* Флекс позиція для двох дів */
+.footer-position {
+    display: flex;
+}
 .social-link-footer {
-    display: block;
+    
     margin-left: 70px;
     width: 206;
     height: 80;
 }
 .footer-icon {
     display: flex;
-    
-    /* margin-bottom: 100px; */
     width: 206;
     height: 44;
 }
 
+/* Заголовок приєднюйтесь */
 .footer-title {
     display: inline-block;
     color: var(--adress-hero-color);
-    
+    margin-bottom: 20px;
     width: 144px;
     font-weight: 700;
     font-size: 14px;
@@ -653,9 +689,13 @@ body {
     text-transform: uppercase;
 }
 
+/* Іконки соц мереж */
 .footer-icon-list {
+    fill: var(--adress-hero-color);
     border: 1px solid transparent;
     border-radius: 50%;
+    padding: 12px;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.1);
     list-style-type: none;
     padding: 12px;
@@ -669,4 +709,6 @@ body {
     background-color: var(--hover-color);
     border-color: #2196F3;
 }
+
+
 
