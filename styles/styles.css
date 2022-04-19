@@ -646,6 +646,7 @@ body {
 
 .benefits-icons {
     background-color: var(--section-command-bgc);
+    border-radius: 4px;
     width: 270;
     height: 120;
     padding: 25px 100px;
