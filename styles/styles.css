@@ -15,6 +15,7 @@
     --general-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
     --button-font-family: inherit;
+    --clients-icon-color: #AFB1B8;
 }
 
 html {
@@ -159,7 +160,7 @@ body {
 
 
 .contact-link {
-    display: block;
+    display: inline-block;
     min-width: 122px;
     padding: 32px 0;
     color: var(--secondary-color);
@@ -170,11 +171,9 @@ body {
 .contact-link:hover,
 .contact-link:focus {
     color: var(--hover-color);
+    fill: var(--hover-color);
 }
 
-/* .contact .contact-item:first-child {
-    margin-left: 331px;
-} */
 
 .contact .contact-item:last-child {
     margin-right: 0;
@@ -331,6 +330,8 @@ body {
 }
 
 .command-list {
+    background-color: var(--adress-hero-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     width: 270px;
     margin-right: 30px;
 }
@@ -341,7 +342,8 @@ body {
 
 .team-work {
     min-width: 147px;
-    padding: 30px 0;
+    padding-top: 30px;
+    /* padding-bottom: 16px; */
     border: 1px solid var(--image-border-color);
     border-top: 0;
     border-radius: 0px 0px 4px 4px;
@@ -534,40 +536,86 @@ body {
 }
 
 /* Стилі іконок */
-.clients {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    width: 170px;
-    height: 92px;
-    border: 1px solid #AFB1B8;
-    /* box-sizing: border-box; */
-    border-radius: 4px;
-
-    
-}
-
-.clients-icon {
-    
-    display: block;
-    outline: 1px solid red;
-    /* background-size: contain; */
-
-    
-}
-
 .smartphone-icon, .email-icon {
+    
+    fill: var(--secondary-color);
     margin-right: 10px;
     vertical-align: middle;
 }
 
-.smartphone-icon:hover {
-    fill: var(--hover-color);
+/* Іконки соцмереж команди */
+.social-link-team {
+    fill: var(--clients-icon-color);
+    display: flex;
+    width: 206px;
+    height: 44px;
+    margin: 16px 32px 30px 32px;
+    justify-content: space-between;
+    list-style-type: none;
 }
 
-/* .benefits-icon {
-    background-color: var(--section-command-bgc);
+.social-link-list {
+    background-color: var(--adress-hero-color);
+}
 
+.team-icon {
+    padding-right: 10px;
+}
+
+.team-icon:hover {
+    fill: var(--adress-hero-color);
+    color: #2196F3;
+}
+
+.client-item {
+    object-position: center;
+    display: inline-block;
+    margin-right: 30px;
+    /* margin-right: 30px;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px; */
+}
+
+.client-item:last-child {
+    margin-right: 0px;
+}
+
+
+.client-list {
+    display: flex;
+    /* width: 206;
+    height: 44; */
+}
+
+
+.client {
+    display: block;
+    padding: 16px 32px;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+.clients-icon {
+    
+    display: block;
+    fill: var(--clients-icon-color);
+    /* outline: 1px solid red; */
+}
+
+.client:hover {
+    fill: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+/* .email-icon:hover {
+    fill: var(--hover-color);
 } */
 
 .benefits-icons {
@@ -578,3 +626,47 @@ body {
     height: 120;
     border-radius: 4px;
 }
+
+.social-link-footer {
+    display: block;
+    margin-left: 70px;
+    width: 206;
+    height: 80;
+}
+.footer-icon {
+    display: flex;
+    
+    /* margin-bottom: 100px; */
+    width: 206;
+    height: 44;
+}
+
+.footer-title {
+    display: inline-block;
+    color: var(--adress-hero-color);
+    
+    width: 144px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.footer-icon-list {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    list-style-type: none;
+    padding: 12px;
+    margin-right: 10px;
+}
+.footer-icon-list:last-child {
+    margin-right: 0;
+}
+.footer-icon-list:hover,
+.footer-icon-list:focus {
+    background-color: var(--hover-color);
+    border-color: #2196F3;
+}
+
