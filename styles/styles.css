@@ -565,9 +565,23 @@ body {
     list-style-type: none;
 }
 
-.social-link-list {
+/* .social-link-list { */
+    /* fill: var(--clients-icon-color); */
+    /* background-color: var(--adress-hero-color); */
+    /* width: 44px;
+    height: 44px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 12px; */
+
+
+
+
+.team-icon {
+    color: var(--adress-hero-color);
     fill: var(--clients-icon-color);
-    background-color: var(--adress-hero-color);
+    object-position: center;
+    display: inline-block;
     width: 44px;
     height: 44px;
     border: 1px solid transparent;
@@ -575,14 +589,7 @@ body {
     padding: 12px;
 }
 
-
-
-.team-icon {
-    object-position: center;
-    display: inline-block;
-}
-
-.social-link-list:hover,
+.team-icon:hover,
 .social-link-list:focus {
     fill: var(--adress-hero-color);
     border: color var(--hover-color);
