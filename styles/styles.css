@@ -565,14 +565,6 @@ body {
     list-style-type: none;
 }
 
-/* .social-link-list { */
-    /* fill: var(--clients-icon-color); */
-    /* background-color: var(--adress-hero-color); */
-    /* width: 44px;
-    height: 44px;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    padding: 12px; */
 
 
 
@@ -590,7 +582,7 @@ body {
 }
 
 .team-icon:hover,
-.social-link-list:focus {
+.team-icon:focus {
     fill: var(--adress-hero-color);
     border: color var(--hover-color);
     background-color: var(--hover-color);
@@ -598,10 +590,14 @@ body {
 }
 
 .client-item {
+    list-style-type: none;
+    margin-right: 30px;
+}
+.client {
     fill: var(--clients-icon-color);
     object-position: center;
     display: block;
-    margin-right: 30px;
+    padding: 16px 32px;
     width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
@@ -616,28 +612,13 @@ body {
 
 .client-list {
     display: flex;
-    /* width: 206;
-    height: 44; */
+  
 }
 
-
-.client {
-    
-    display: block;
-    padding: 16px 32px;
-}
-
-
-.clients-icon {
-    
-    display: block;
-    /*  */
-    /* outline: 1px solid red; */
-}
-
-.client-item:hover {
+.client:hover {
     fill: var(--hover-color);
     border-color: var(--hover-color);
+    
 }
 
 .benefits {
@@ -699,25 +680,34 @@ body {
 }
 
 /* Іконки соц мереж */
-.footer-icon-list {
+
+.icon-link {
+    display: block;
     fill: var(--adress-hero-color);
     border: 1px solid transparent;
     border-radius: 50%;
     padding: 12px;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
+    width: 44px;
+    height: 44px;
+    color: rgba(255, 255, 255, 0.1);
     list-style-type: none;
-    padding: 12px;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+.footer-icon-list {
+    object-position: center;
+    list-style-type: none;
     margin-right: 10px;
 }
 .footer-icon-list:last-child {
     margin-right: 0;
 }
-.footer-icon-list:hover,
-.footer-icon-list:focus {
-    background-color: var(--hover-color);
-    border-color: #2196F3;
-}
+
 
 
 
