@@ -87,7 +87,6 @@ body {
 
 .footer-logo {
     display: inline-block;
-    /* min-width: 145px; */
     margin-bottom: 20px;
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -141,7 +140,7 @@ body {
 
 /* Поточна сторінка */
 .current {
-    color: var(--hover-color)
+    color: var(--hover-color);
     outline: none;}
 
 /* Контакти в хедері */
