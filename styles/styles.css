@@ -191,8 +191,7 @@ body {
     background-position: center;
     max-width: 1600px;
     min-height: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -217,7 +216,6 @@ body {
     border-radius: 4px;
     padding: 10px 32px;
     margin-top: 30px;
-    /* min-width: 200px; */
     cursor: pointer;
     color: var(--adress-hero-color);
     background-color: var(--hover-color);
@@ -562,10 +560,19 @@ body {
 
 .social-link-team {
     display: flex;
+    margin: 0 32px;
+    align-items: center;
     justify-content: center;
     list-style-type: none;
 }
 
+.social-link-list {
+    margin-right: 10px;
+}
+
+.social-link-list:last-child {
+    margin-right: 0;
+}
 .team-icon {
     display: flex;
     color: var(--adress-hero-color);
