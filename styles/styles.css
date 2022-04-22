@@ -560,7 +560,6 @@ body {
 
 .social-link-team {
     display: flex;
-    margin: 0 32px;
     align-items: center;
     justify-content: center;
     list-style-type: none;
